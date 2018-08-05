@@ -9,6 +9,7 @@ public class MyBean {
 //    }
 // --Commented out by Inspection STOP (8/5/18, 4:13 AM)
 
+    @SuppressWarnings("UnnecessaryLocalVariable")
     public void setData(String data) {
         String myData = data;
     }

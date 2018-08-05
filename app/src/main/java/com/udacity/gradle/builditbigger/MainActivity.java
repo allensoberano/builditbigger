@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @SuppressWarnings("unused")
     public void launchLibraryActivity(View view){
 
         new EndpointsAsyncTask().execute(this);
