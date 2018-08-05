@@ -6,8 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.android.javajokeslist.JavaJokes;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,14 +37,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public String tellJoke() {
-
-        JavaJokes javaJokes = new JavaJokes();
-        return javaJokes.getJoke();
-
-       // Toast.makeText(this, javaJokes.getJoke(), Toast.LENGTH_SHORT).show();
     }
 
 
