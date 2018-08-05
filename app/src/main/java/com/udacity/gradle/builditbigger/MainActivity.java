@@ -1,15 +1,11 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.android.androidjokelibrary.JokerActivity;
 import com.example.android.javajokeslist.JavaJokes;
 
 
@@ -20,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
+        //new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
+        //new EndpointsAsyncTask().execute(this);
     }
 
 
@@ -54,10 +51,13 @@ public class MainActivity extends AppCompatActivity {
        // Toast.makeText(this, javaJokes.getJoke(), Toast.LENGTH_SHORT).show();
     }
 
+    public void getJoke(){
+        new EndpointsAsyncTask().execute(this);
+    }
+
     public void launchLibraryActivity(View view){
-        Intent intent = new Intent(this, JokerActivity.class);
-        intent.putExtra("joke", tellJoke());
-        startActivity(intent);
+
+        getJoke();
 
     }
 

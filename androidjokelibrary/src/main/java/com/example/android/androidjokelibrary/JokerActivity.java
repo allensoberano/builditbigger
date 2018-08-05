@@ -18,7 +18,6 @@ public class JokerActivity extends AppCompatActivity {
            javaJoke = getIntent().getStringExtra("joke");
 
             textView.setText(javaJoke);
-           ///NEXT: DISPLAY JOKE IN TEXTVIEW ON ACTIVITY
         }
     }
 }
